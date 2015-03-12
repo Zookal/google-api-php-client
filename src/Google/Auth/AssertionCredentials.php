@@ -15,10 +15,6 @@
  * limitations under the License.
  */
 
-if (!class_exists('Google_Client')) {
-  require_once dirname(__FILE__) . '/../autoload.php';
-}
-
 /**
  * Credentials object used for OAuth 2.0 Signed JWT assertion grants.
  */
@@ -68,7 +64,7 @@ class Google_Auth_AssertionCredentials
     $this->prn = $sub;
     $this->useCache = $useCache;
   }
-  
+
   /**
    * Generate a unique key to represent this credential.
    * @return string

@@ -22,10 +22,6 @@
  */
 use google\appengine\api\app_identity\AppIdentityService;
 
-if (!class_exists('Google_Client')) {
-  require_once dirname(__FILE__) . '/../autoload.php';
-}
-
 /**
  * Authentication via the Google App Engine App Identity service.
  */

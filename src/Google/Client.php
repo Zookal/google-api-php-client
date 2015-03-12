@@ -15,10 +15,6 @@
  * limitations under the License.
  */
 
-if (!class_exists('Google_Client')) {
-  require_once dirname(__FILE__) . '/../autoload.php';
-}
-
 /**
  * The Google API Client
  * http://code.google.com/p/google-api-php-client/
@@ -124,12 +120,12 @@ class Google_Client
     $this->authenticated = true;
     return $this->getAuth()->authenticate($code);
   }
-  
+
   /**
-   * Loads a service account key and parameters from a JSON 
+   * Loads a service account key and parameters from a JSON
    * file from the Google Developer Console. Uses that and the
-   * given array of scopes to return an assertion credential for 
-   * use with refreshTokenWithAssertionCredential. 
+   * given array of scopes to return an assertion credential for
+   * use with refreshTokenWithAssertionCredential.
    *
    * @param string $jsonLocation File location of the project-key.json.
    * @param array $scopes The scopes to assert.

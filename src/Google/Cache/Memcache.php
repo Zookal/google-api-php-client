@@ -15,10 +15,6 @@
  * limitations under the License.
  */
 
-if (!class_exists('Google_Client')) {
-  require_once dirname(__FILE__) . '/../autoload.php';
-}
-
 /**
  * A persistent storage class based on the memcache, which is not
  * really very persistent, as soon as you restart your memcache daemon

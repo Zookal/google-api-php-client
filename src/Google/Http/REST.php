@@ -15,10 +15,6 @@
  * limitations under the License.
  */
 
-if (!class_exists('Google_Client')) {
-  require_once dirname(__FILE__) . '/../autoload.php';
-}
-
 /**
  * This class implements the RESTful transport of apiServiceRequest()'s
  */
@@ -115,7 +111,7 @@ class Google_Http_REST
       if ($response->getExpectedRaw()) {
         return $body;
       }
-      
+
       $decoded = json_decode($body, true);
       if ($decoded === null || $decoded === "") {
         $error = "Invalid json in service response: $body";
